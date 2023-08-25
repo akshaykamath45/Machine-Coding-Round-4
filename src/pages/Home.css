@@ -1,0 +1,24 @@
+.landing-card{
+    display:grid;
+    grid-template-areas: 
+    'counter content content '
+    ;
+    border:1px solid lightgray;
+}
+.counter{
+    grid-area: counter;
+    display:flex;
+    flex-direction: column;
+}
+.post-tags
+{
+    display: flex;
+    gap:10px;
+}
+.card-content{
+    grid-area:content;
+}
+.card-footer{
+    display:flex;
+    justify-content: space-evenly;
+}
