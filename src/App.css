@@ -1,36 +1,36 @@
-.layout{
-  display:grid;
+.layout {
+  display: grid;
   grid-template-areas:
-  'header header header header'
-  'sidebar main main sortby'
-  'profile main main sortby'
-  ;
+    "header header header header "
+    "sidebar main  sortby sortby"
+    "profile main  sortby sortby";
+  grid-gap: 3rem;
 }
 
-.header{
-  grid-area:header;
-  border:1px solid black;
+.header {
+  grid-area: header;
+  border: 1px solid black;
+  padding: 24px;
 }
 
-.sidebar{
-  grid-area:sidebar;
-  border:1px solid black;
-  display:flex;
+.sidebar {
+  grid-area: sidebar;
+  border: 1px solid black;
+  display: flex;
   flex-direction: column;
-
 }
-.main{
-  grid-area:main;
-  border:1px solid black;
+.main {
+  grid-area: main;
+  border: 1px solid black;
 }
-.card{
-  border:1px solid black;
+.card {
+  border: 1px solid black;
 }
-.sort-by{
-  grid-area:sortby;
-  border:1px solid black;
+.sort-by {
+  grid-area: sortby;
+  border: 1px solid black;
 }
-.profile{
-  border:1px solid black;
-  grid-area:profile;
+.profile {
+  border: 1px solid black;
+  grid-area: profile;
 }

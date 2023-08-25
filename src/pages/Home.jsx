@@ -5,7 +5,7 @@ export const Home = () => {
   const { data } = useContext(DataContext);
   console.log(data);
   return (
-    <div>
+    <div className="home-page">
       <h4>Latest Posts</h4>
       {data.posts.map((post) => {
         return (
@@ -21,7 +21,11 @@ export const Home = () => {
               >
                 <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
               </svg>
-              <h2>{post.upvotes - post.downvotes}</h2>
+              <h2>
+                <span className="add-color">
+                  {post.upvotes - post.downvotes}
+                </span>
+              </h2>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -34,14 +38,28 @@ export const Home = () => {
               </svg>
             </div>
             <div className="card-content">
-              <p>Posted by {post.username}</p>
-              <h2>{post.post}</h2>
+              <div className="card-header">
+                <img
+                  src={post.picUrl}
+                  alt="profile-img"
+                  className="profile-image"
+                ></img>
+                <p>
+                  Posted by <span className="add-color"> @{post.username}</span>
+                </p>
+              </div>
+
+              <h2 className="post-title">{post.post}</h2>
               <div className="post-tags">
                 {post.tags.map((tag) => {
-                  return <p>{tag}</p>;
+                  return (
+                    <p className="post-tag">
+                      <b>{tag}</b>
+                    </p>
+                  );
                 })}
               </div>
-              <p>{post.postDescription}</p>
+              <p className="post-description">{post.postDescription}</p>
               <hr />
               <div className="card-footer">
                 <div>
