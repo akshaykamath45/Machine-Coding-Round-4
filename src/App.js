@@ -1,5 +1,6 @@
 import "./App.css";
 import { Sidebar } from "./components/Sidebar";
+import {Home} from "./pages/Home"
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
         <div className='main'>
             <div className='card'>card1</div>
             <div className='card'>card2</div>
+            <div className='card'><Home/></div>
         </div>
       <div className='sort-by'>
         <div className='sort-card'>Sort By</div>
