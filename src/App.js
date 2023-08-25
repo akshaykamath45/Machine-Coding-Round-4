@@ -1,6 +1,8 @@
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import { Sidebar } from "./components/Sidebar";
 import { Home } from "./pages/Home";
+import { SinglePost } from "./pages/SinglePost";
 function App() {
   return (
     <div className="App">
@@ -14,7 +16,10 @@ function App() {
         </div>
         <div className="main">
           <div className="card">
-            <Home />
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="/post/:postID" element={<SinglePost />}></Route>
+            </Routes>
           </div>
         </div>
         <div className="sort-by">
