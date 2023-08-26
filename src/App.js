@@ -4,13 +4,21 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import { Sidebar } from "./components/Sidebar";
 import { Home } from "./pages/Home";
 import { SinglePost } from "./pages/SinglePost";
+import { useContext } from "react";
+import { DataContext } from "./contexts/DataContext";
 
 function App() {
   const navigate = useNavigate();
+  const { data } = useContext(DataContext);
   return (
     <div className="App">
       <div className="layout">
-        <div className="header" onClick={() => navigate("/")} >MyForum</div>
+        <div className="header" onClick={() => navigate("/")}>
+          MyForum
+        </div>
+        <div className='handle-navbar'>
+
+        </div>
         <div className="sidebar">
           <div className="sidebar-tab home" onClick={() => navigate("/")}>
             <svg
@@ -72,6 +80,21 @@ function App() {
             Profile
           </div>
         </div>
+        <div className="profile">
+          <div className="profile-card">
+            <img
+              src={data.picUrl}
+              className="profile-image"
+              alt="profile-img"
+            ></img>
+            <div>
+              <p>
+                <b>{data.name}</b>
+              </p>
+              <p className="add-color">@{data.username}</p>
+            </div>
+          </div>
+        </div>
         <div className="main">
           <Routes>
             <Route path="/" element={<Home />}></Route>
@@ -81,9 +104,7 @@ function App() {
         <div className="sort-by">
           <div className="sort-card">Sort By</div>
         </div>
-        <div className="profile">
-          <div className="profile-card">Profile</div>
-        </div>
+       
       </div>
     </div>
   );

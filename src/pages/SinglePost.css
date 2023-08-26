@@ -1,5 +1,6 @@
 .single-post-page {
   width: 770px;
+ 
 }
 .landing-card {
   display: grid;
@@ -10,6 +11,7 @@
   grid-gap: 2rem;
   margin-bottom: 40px;
   margin-left: 40px;
+
 }
 
 .counter {
@@ -82,6 +84,7 @@
   grid-gap: 2rem;
   margin-bottom: 40px;
   margin-left: 40px;
+  background-color: white;
 }
 .profile-image-holder {
   grid-area: profile;

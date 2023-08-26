@@ -2,8 +2,9 @@
   display: grid;
   grid-template-areas:
     "header header header header "
-    "sidebar main  sortby sortby"
-    "profile main  sortby sortby";
+    "sidebar sidebar  sidebar profile"
+    "sortby sortby  main  main"
+    "sortby sortby  main  main";
   grid-gap: 3rem;
   background-color: rgb(247 247 247);
 }
@@ -24,7 +25,7 @@
   grid-area: sidebar;
   /* border: 1px solid black; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   font-weight: 400;
@@ -50,9 +51,36 @@
   border: 1px solid black;
 }
 .profile {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   grid-area: profile;
 }
 .header:hover{
   cursor: pointer;
+}
+.add-color {
+  color: rgb(106 97 206);
+}
+.profile-card{
+  display: flex;
+  align-items: center;
+  gap:15px;
+  justify-content: center;
+}
+
+@media  (min-width:768px)
+{
+  .layout{
+    grid-template-areas:
+    "header header header header "
+    "sidebar main  sortby sortby"
+    "sidebar main  sortby sortby"
+    "profile main  sortby sortby";
+  }
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: 400;
+  }
 }
