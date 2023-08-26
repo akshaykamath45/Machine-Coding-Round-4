@@ -12,22 +12,22 @@ export const DataProvider = ({ children }) => {
   // },[])
 
   const increaseVoteCount = (post) => {
-    const updateVote = data.map((selectedPost) =>
-      selectedPost.id === post.id ? { upvotes: upvotes + 1 } : selectedPost
+    const updateVote = data.posts.map((selectedPost) =>
+      selectedPost.postId === post.postId ?  {...selectedPost,upvotes:selectedPost.upvotes+1} : selectedPost
     );
-    setData(updateVote);
+    setData({ ...data, posts: updateVote });
   };
   const decreaseVoteCount = (post) => {
-    const updateVote = data.map((selectedPost) =>
-      selectedPost.id === post.id ? { downvotes: downvotes + 1 } : selectedPost
+    const updateDecreasedVote = data.posts.map((selectedPost) =>
+      selectedPost.postId === post.postId ?  {...selectedPost,downvotes:selectedPost.downvotes+1} : selectedPost
     );
-    setData(updateVote);
+    setData({ ...data, posts: updateDecreasedVote });
   };
   const value = {
     data,
     setData,
     increaseVoteCount,
-    decreaseVoteCount,
+    decreaseVoteCount
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
