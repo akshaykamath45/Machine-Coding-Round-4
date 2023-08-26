@@ -23,11 +23,17 @@ export const DataProvider = ({ children }) => {
     );
     setData({ ...data, posts: updateDecreasedVote });
   };
+
+  const handleBookmark=(post)=>{
+    const addToBookmark=data.posts.map((selectedPost)=>selectedPost.postId===post.postId ? {...selectedPost,bookmark:!selectedPost.bookmark}:selectedPost);
+    setData({...data,posts:addToBookmark})
+  }
   const value = {
     data,
     setData,
     increaseVoteCount,
-    decreaseVoteCount
+    decreaseVoteCount,
+    handleBookmark
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
