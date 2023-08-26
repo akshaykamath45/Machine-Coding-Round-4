@@ -69,7 +69,9 @@
   gap: 10px;
   align-items: center;
 }
-.bi bi-chat-left
-{
-    text-decoration: none;
+.bi bi-chat-left {
+  text-decoration: none;
+}
+.hover-btn:hover {
+  cursor: pointer;
 }

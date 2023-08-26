@@ -1,9 +1,10 @@
 import { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Home.css";
 export const Home = () => {
-  const { data,increaseVoteCount,decreaseVoteCount} = useContext(DataContext);
+  const { data, increaseVoteCount, decreaseVoteCount } =
+    useContext(DataContext);
   console.log(data);
   return (
     <div className="home-page">
@@ -19,7 +20,8 @@ export const Home = () => {
                 fill="currentColor"
                 class="bi bi-caret-up-fill"
                 viewBox="0 0 16 16"
-                onClick={()=>increaseVoteCount(post)}
+                className="hover-btn"
+                onClick={() => increaseVoteCount(post)}
               >
                 <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
               </svg>
@@ -35,7 +37,8 @@ export const Home = () => {
                 fill="currentColor"
                 class="bi bi-caret-down-fill"
                 viewBox="0 0 16 16"
-                onClick={()=>decreaseVoteCount(post)}
+                className="hover-btn"
+                onClick={() => decreaseVoteCount(post)}
               >
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
               </svg>
@@ -66,18 +69,18 @@ export const Home = () => {
               <hr />
               <div className="card-footer">
                 <div>
-                    <Link to={`/post/${post.postId}`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-chat-left"
-                    viewBox="0 0 16 16"
-
-                  >
-                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
-                  </svg>
+                  <Link to={`/post/${post.postId}`}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chat-left"
+                      viewBox="0 0 16 16"
+                      className="hover-btn"
+                    >
+                      <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                    </svg>
                   </Link>
                 </div>
                 <div>

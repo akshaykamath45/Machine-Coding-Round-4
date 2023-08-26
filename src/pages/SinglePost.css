@@ -1,107 +1,114 @@
 .single-post-page {
-    width: 770px;
-  }
-  .landing-card {
-    display: grid;
-    grid-template-areas:
-      "counter maincontent maincontent "
-      "counter maincontent maincontent ";
-    border: 1px solid lightgray;
-    grid-gap: 2rem;
-    margin-bottom: 40px;
-    margin-left: 40px;
-  }
-  
-  .counter {
-    grid-area: counter;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-top: 5px;
-  }
-  .card-content {
-    grid-area: maincontent;
-    text-align: left;
-  }
-  .post-tags {
-    display: flex;
-    gap: 10px;
-    margin-top: -10px;
-  }
-  .post-tag {
-    padding: 8px;
-    background-color: rgb(229 228 248);
-    color: rgb(106 97 206);
-    text-transform: uppercase;
-    border-radius: 12px;
-    font-size: xx-small;
-    border: none;
-  }
-  .card-footer {
-    grid-area: footer;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .post-title {
-    margin-top: -1px;
-  }
-  .post-description {
-    font-weight: 400;
-  
-    /* font-size: larger; */
-    /* color:red */
-  }
-  .add-color {
-    color: rgb(106 97 206);
-  }
-  .profile-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    /* align-items: center; */
-  }
-  .card-header {
-    display: flex;
-    margin-top: 10px;
-    gap: 10px;
-    align-items: center;
-  }
-  .bi bi-chat-left
-  {
-      text-decoration: none;
-  }
-
-  /*Comment Card */
-  .comment-card {
-    display: flex;
-    /* grid-template-areas:
-      "profile comment comment "; */
-  
-    border: 1px solid lightgray;
-    grid-gap: 2rem;
-    margin-bottom: 40px;
-    margin-left: 40px;
-  }
-.profile-image-holder{
-    grid-area:profile;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin:10px;
+  width: 770px;
 }
-.comment-content{
-    grid-area: comment;
-    text-align: left;
-    
+.landing-card {
+  display: grid;
+  grid-template-areas:
+    "counter maincontent maincontent "
+    "counter maincontent maincontent ";
+  border: 1px solid lightgray;
+  grid-gap: 2rem;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.counter {
+  grid-area: counter;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.card-content {
+  grid-area: maincontent;
+  text-align: left;
+}
+.post-tags {
+  display: flex;
+  gap: 10px;
+  margin-top: -10px;
+}
+.post-tag {
+  padding: 8px;
+  background-color: rgb(229 228 248);
+  color: rgb(106 97 206);
+  text-transform: uppercase;
+  border-radius: 12px;
+  font-size: xx-small;
+  border: none;
+}
+.card-footer {
+  grid-area: footer;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.post-title {
+  margin-top: -1px;
+}
+.post-description {
+  font-weight: 400;
+
+  /* font-size: larger; */
+  /* color:red */
+}
+.add-color {
+  color: rgb(106 97 206);
+}
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  /* align-items: center; */
+}
+.card-header {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  align-items: center;
+}
+.bi bi-chat-left {
+  text-decoration: none;
+}
+
+/*Comment Card */
+.comment-card {
+  display: flex;
+  /* grid-template-areas:
+      "profile comment comment "; */
+
+  border: 1px solid lightgray;
+  grid-gap: 2rem;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+.profile-image-holder {
+  grid-area: profile;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+.comment-content {
+  grid-area: comment;
+  text-align: left;
 }
 .comment-footer {
-    grid-area: footer;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .reply-color{
-    color:grey
-  }
+  grid-area: footer;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.reply-color {
+  color: grey;
+}
+.navigate-back {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  gap: 15px;
+}
+.hover-btn:hover {
+  cursor: pointer;
+}
