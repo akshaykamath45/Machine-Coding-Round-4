@@ -10,9 +10,24 @@ export const DataProvider = ({ children }) => {
   // useEffect(()=>{
   //     localStorage.setItem('forumData',JSON.stringify(data));
   // },[])
+
+  const increaseVoteCount = (post) => {
+    const updateVote = data.map((selectedPost) =>
+      selectedPost.id === post.id ? { upvotes: upvotes + 1 } : selectedPost
+    );
+    setData(updateVote);
+  };
+  const decreaseVoteCount = (post) => {
+    const updateVote = data.map((selectedPost) =>
+      selectedPost.id === post.id ? { downvotes: downvotes + 1 } : selectedPost
+    );
+    setData(updateVote);
+  };
   const value = {
     data,
     setData,
+    increaseVoteCount,
+    decreaseVoteCount,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
