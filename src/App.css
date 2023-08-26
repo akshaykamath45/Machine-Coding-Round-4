@@ -1,3 +1,6 @@
+body{
+  background-color: rgb(247 247 247);
+}
 .layout {
   display: grid;
   grid-template-areas:
@@ -7,7 +10,7 @@
     "main  main  main"
     "main  main  main";
   grid-gap: 3rem;
-  background-color: rgb(247 247 247);
+
 }
 
 .header {
