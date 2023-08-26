@@ -1,5 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { forumData } from "../data/Data";
+import {toast} from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
@@ -35,18 +37,24 @@ export const DataProvider = ({ children }) => {
         : selectedPost
     );
     setData({ ...data, posts: addToBookmark });
+    if(!post.bookmark){
+      toast.success("Post Bookmarked",{autoClose:500});
+    }else{
+      toast.success("Post removed from Bookmark",{autoClose:500});
+    }
+  
   };
 
   const sortHandler = (selectedValue) => {
-    if (selectedValue == "All") {
+    if (selectedValue === "All") {
       setData({ ...data });
-    } else if (selectedValue == "Most-Upvotes") {
+    } else if (selectedValue === "Most-Upvotes") {
       const sortedPosts = [...data.posts].sort((a, b) => b.upvotes - a.upvotes);
       setData({
         ...data,
         posts: sortedPosts,
       });
-    } else if (selectedValue == "Least-Upvotes") {
+    } else if (selectedValue === "Least-Upvotes") {
       const sortedPosts = [...data.posts].sort((a, b) => a.upvotes - b.upvotes);
       setData({
         ...data,
