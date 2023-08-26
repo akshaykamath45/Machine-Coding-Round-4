@@ -1,20 +1,21 @@
 .home-page {
-  width: 770px;
+  width: 450px;
 }
-.content-header{
-    text-align: left;
-    margin-left: 50px;
+.content-header {
+  text-align: left;
+  margin-left: 50px;
 }
 .landing-card {
   display: grid;
   grid-template-areas:
     "counter maincontent maincontent "
-    "counter maincontent maincontent ";
+    " maincontent maincontent ";
   border: 1px solid lightgray;
   grid-gap: 2rem;
   margin-bottom: 40px;
   margin-left: 40px;
   background-color: white;
+
 }
 
 .counter {
@@ -27,6 +28,7 @@
 .card-content {
   grid-area: maincontent;
   text-align: left;
+  padding-right: 35px;
 }
 .post-tags {
   display: flex;
@@ -78,4 +80,16 @@
 }
 .hover-btn:hover {
   cursor: pointer;
+}
+
+
+@media screen and (min-width:768px) {
+ .landing-card{
+  grid-template-areas:
+  "counter maincontent maincontent "
+  "counter maincontent maincontent ";
+ } 
+ .home-page {
+  width: 770px;
+}
 }

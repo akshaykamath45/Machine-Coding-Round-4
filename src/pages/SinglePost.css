@@ -1,5 +1,5 @@
 .single-post-page {
-  width: 770px;
+  width: 450px;
  
 }
 .landing-card {
@@ -115,3 +115,13 @@
 .hover-btn:hover {
   cursor: pointer;
 }
+@media screen and (min-width:768px) {
+  .landing-card{
+   grid-template-areas:
+   "counter maincontent maincontent "
+   "counter maincontent maincontent ";
+  } 
+  .single-post-page {
+   width: 770px;
+ }
+ }

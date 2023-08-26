@@ -1,10 +1,11 @@
 .layout {
   display: grid;
   grid-template-areas:
-    "header header header header "
-    "sidebar sidebar  sidebar profile"
-    "sortby sortby  main  main"
-    "sortby sortby  main  main";
+    "header header header "
+    "sidebar sidebar  sidebar"
+    "sortby sortby sortby"
+    "main  main  main"
+    "main  main  main";
   grid-gap: 3rem;
   background-color: rgb(247 247 247);
 }
@@ -14,6 +15,7 @@
   border: 1px solid black;
   padding: 24px;
   background-color: white;
+  width: 100vw;
   color: rgb(106 97 206);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -26,9 +28,10 @@
   /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 14px;
   align-items: center;
   font-weight: 400;
+  margin-left: 40px;
 }
 .sidebar-tab {
   display: flex;
@@ -48,39 +51,113 @@
 
 .sort-by {
   grid-area: sortby;
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  /* border: 1px solid black; */
+}
+.sort-card {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-left: -65px;
 }
 .profile {
   /* border: 1px solid black; */
   grid-area: profile;
 }
-.header:hover{
+.header:hover {
   cursor: pointer;
 }
 .add-color {
   color: rgb(106 97 206);
 }
-.profile-card{
+.profile-card {
   display: flex;
   align-items: center;
-  gap:15px;
+  gap: 15px;
   justify-content: center;
 }
+.select-tag {
+  width: 150px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0px 16;
+  height: 60px;
+}
 
-@media  (min-width:768px)
-{
-  .layout{
+.select-tag option {
+  padding: 8px 16px;
+  color: #333;
+  font-size: 16px;
+}
+
+.select-tag option:hover {
+  background-color: #b08d8d;
+}
+
+.select-tag option:selected {
+  background-color: #9e9e9e;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .layout {
     grid-template-areas:
-    "header header header header "
-    "sidebar main  sortby sortby"
-    "sidebar main  sortby sortby"
-    "profile main  sortby sortby";
+      "header header header header "
+      "sidebar main  sortby sortby"
+      "sidebar main  sortby sortby"
+      "profile main  sortby sortby";
   }
-  .sidebar{
+  .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     font-weight: 400;
+  }
+  .select-tag {
+    width: 100px;
+    border: 1px solid #ccc;
+    /* border-radius: 0px; */
+    padding: 8px 16px;
+    background-color: #fff;
+  }
+  .sort-by {
+    grid-area: sortby;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* justify-content: center;
+    gap:15px */
+    /* border: 1px solid black; */
+  }
+  .select-tag {
+    width: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background-color: #fff;
+  }
+
+  .select-tag option {
+    padding: 8px 16px;
+    color: #333;
+    font-size: 16px;
+  }
+
+  .select-tag option:hover {
+    background-color: #b08d8d;
+  }
+
+  .select-tag option:selected {
+    background-color: #9e9e9e;
+    color: #fff;
+  }
+  .sort-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
   }
 }

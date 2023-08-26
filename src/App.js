@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { Sidebar } from "./components/Sidebar";
+
 import { Home } from "./pages/Home";
 import { SinglePost } from "./pages/SinglePost";
 import { useContext } from "react";
@@ -105,13 +105,17 @@ function App() {
           </Routes>
         </div>
         <div className="sort-by">
-          <div className="sort-card">Sort By</div>
-          <select onChange={handleSort}>
-            <option value="All">All</option>
-            <option>Latest Votes</option>
-            <option value="Most-Upvotes">Most Upvoted</option>
-            <option value="Least-Upvotes">Least Upvoted</option>
-          </select>
+          <div className="sort-card">
+          <h2>Sort By</h2>
+
+<select onChange={handleSort} className="select-tag">
+  <option value="All">All</option>
+  <option>Latest Votes</option>
+  <option value="Most-Upvotes">Most Upvoted</option>
+  <option value="Least-Upvotes">Least Upvoted</option>
+</select>
+          </div>
+         
         </div>
       </div>
     </div>
