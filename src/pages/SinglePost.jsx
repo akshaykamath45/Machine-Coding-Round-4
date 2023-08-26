@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { DataContext } from "../contexts/DataContext";
 export const SinglePost = () => {
-  const { data, increaseVoteCount } = useContext(DataContext);
-  const { postID, decreaseVoteCount } = useParams();
+  const { data, increaseVoteCount, decreaseVoteCount } = useContext(DataContext);
+  const { postID} = useParams();
 
   const selectedPost = data.posts.find(
     (post) => parseInt(post.postId) === parseInt(postID, 10)
