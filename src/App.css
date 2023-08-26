@@ -42,11 +42,9 @@
 }
 .main {
   grid-area: main;
-  border: 1px solid black;
-}
-.card {
   /* border: 1px solid black; */
 }
+
 .sort-by {
   grid-area: sortby;
   border: 1px solid black;
@@ -54,4 +52,7 @@
 .profile {
   border: 1px solid black;
   grid-area: profile;
+}
+.header:hover{
+  cursor: pointer;
 }

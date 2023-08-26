@@ -8,10 +8,12 @@ export const Home = () => {
   console.log(data);
   return (
     <div className="home-page">
-      <h4>Latest Posts</h4>
+          <h2 className='content-header'>Latest Posts</h2>
       {data.posts.map((post) => {
+       
         return (
           <div className="landing-card">
+         
             <div className="counter">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

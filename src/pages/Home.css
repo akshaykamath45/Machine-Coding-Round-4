@@ -1,6 +1,10 @@
 .home-page {
   width: 770px;
 }
+.content-header{
+    text-align: left;
+    margin-left: 50px;
+}
 .landing-card {
   display: grid;
   grid-template-areas:
