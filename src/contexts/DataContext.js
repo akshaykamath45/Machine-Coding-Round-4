@@ -1,7 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 import { forumData } from "../data/Data";
-import {toast} from "react-toastify"
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
@@ -37,12 +37,11 @@ export const DataProvider = ({ children }) => {
         : selectedPost
     );
     setData({ ...data, posts: addToBookmark });
-    if(!post.bookmark){
-      toast.success("Post Bookmarked",{autoClose:500});
-    }else{
-      toast.success("Post removed from Bookmark",{autoClose:500});
+    if (!post.bookmark) {
+      toast.success("Post Bookmarked", { autoClose: 500 });
+    } else {
+      toast.success("Post removed from Bookmark", { autoClose: 500 });
     }
-  
   };
 
   const sortHandler = (selectedValue) => {

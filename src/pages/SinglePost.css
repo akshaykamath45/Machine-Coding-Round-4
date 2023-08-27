@@ -1,6 +1,5 @@
 .single-post-page {
   width: 450px;
- 
 }
 .landing-card {
   display: grid;
@@ -11,7 +10,6 @@
   grid-gap: 2rem;
   margin-bottom: 40px;
   margin-left: 40px;
-
 }
 
 .counter {
@@ -115,13 +113,13 @@
 .hover-btn:hover {
   cursor: pointer;
 }
-@media screen and (min-width:768px) {
-  .landing-card{
-   grid-template-areas:
-   "counter maincontent maincontent "
-   "counter maincontent maincontent ";
-  } 
+@media screen and (min-width: 768px) {
+  .landing-card {
+    grid-template-areas:
+      "counter maincontent maincontent "
+      "counter maincontent maincontent ";
+  }
   .single-post-page {
-   width: 770px;
- }
- }
+    width: 770px;
+  }
+}

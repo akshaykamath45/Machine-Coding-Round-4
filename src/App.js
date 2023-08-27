@@ -106,16 +106,14 @@ function App() {
         </div>
         <div className="sort-by">
           <div className="sort-card">
-          <h2>Sort By</h2>
-
-<select onChange={handleSort} className="select-tag">
-  <option value="All">All</option>
-  <option>Latest Votes</option>
-  <option value="Most-Upvotes">Most Upvoted</option>
-  <option value="Least-Upvotes">Least Upvoted</option>
-</select>
+            <h2>Sort By</h2>
+            <select onChange={handleSort} className="select-tag">
+              <option value="All">All</option>
+              <option>Latest Votes</option>
+              <option value="Most-Upvotes">Most Upvoted</option>
+              <option value="Least-Upvotes">Least Upvoted</option>
+            </select>
           </div>
-         
         </div>
       </div>
     </div>

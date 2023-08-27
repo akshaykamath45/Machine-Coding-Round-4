@@ -15,7 +15,6 @@
   margin-bottom: 40px;
   margin-left: 40px;
   background-color: white;
-
 }
 
 .counter {
@@ -82,14 +81,13 @@
   cursor: pointer;
 }
 
-
-@media screen and (min-width:768px) {
- .landing-card{
-  grid-template-areas:
-  "counter maincontent maincontent "
-  "counter maincontent maincontent ";
- } 
- .home-page {
-  width: 770px;
-}
+@media screen and (min-width: 768px) {
+  .landing-card {
+    grid-template-areas:
+      "counter maincontent maincontent "
+      "counter maincontent maincontent ";
+  }
+  .home-page {
+    width: 770px;
+  }
 }
